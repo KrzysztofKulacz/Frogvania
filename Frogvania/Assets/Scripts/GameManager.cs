@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     public int points;
 
     public TextMeshProUGUI interfacePoints;
+    public TextMeshProUGUI interfaceLives;
+
 
     private void Start()
     {
@@ -23,5 +25,12 @@ public class GameManager : MonoBehaviour
     {
         points++;
         interfacePoints.text = points.ToString();
+    }
+
+    public void SubLive()
+    {
+        lives--;
+        interfaceLives.text = lives.ToString();
+
     }
 }
