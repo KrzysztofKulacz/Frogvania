@@ -10,10 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 4014115346744085661}
   - component: {fileID: 6780702569294293636}
-  - component: {fileID: 4463865975981498803}
   - component: {fileID: 2108381440476336167}
+  - component: {fileID: 4858355955187335526}
   m_Layer: 0
-  m_Name: BlockPoint
+  m_Name: Point
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -86,18 +86,6 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &4463865975981498803
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4503670709622119540}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e6263eb3a5d4a8f4cb9809bd7e3c40e3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!61 &2108381440476336167
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -124,3 +112,15 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.3, y: 0.3}
   m_EdgeRadius: 0
+--- !u!114 &4858355955187335526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4503670709622119540}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e71843c4e973e844b11b20f886b68fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

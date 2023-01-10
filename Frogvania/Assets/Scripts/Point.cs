@@ -1,16 +1,13 @@
 using System.Collections;
 using UnityEngine;
 
-public class BlockPoint : MonoBehaviour
+public class Point : MonoBehaviour
 {
     private void OnCollisionEnter2D(Collision2D collision)
     { 
         if(collision.gameObject.name == "Hero")
         {
-            if (collision.transform.DotTest(transform, Vector2.up))
-            {
-                StartCoroutine(Animate());
-            }
+            StartCoroutine(Animate());
         }
     }
         private IEnumerator Animate()
