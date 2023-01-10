@@ -3,15 +3,26 @@ using UnityEngine;
 
 public class Point : MonoBehaviour
 {
+    public static GameManager game;
+    private bool animating;
+
+    private void Start()
+    {
+        game = GameManager.Instance;
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     { 
-        if(collision.gameObject.name == "Hero")
+        if(!animating && collision.gameObject.name == "Hero")
         {
+            game.AddPoint();
+
             StartCoroutine(Animate());
         }
     }
         private IEnumerator Animate()
     {
+        animating = true;
+
         Vector3 restingPosition = transform.localPosition;
         Vector3 animatedPosition = restingPosition + Vector3.up * 2f;
 
@@ -19,6 +30,9 @@ public class Point : MonoBehaviour
         yield return Move(animatedPosition, restingPosition);
 
         Destroy(gameObject);
+
+        animating = false;
+
     }
 
     private IEnumerator Move(Vector3 from, Vector3 to)
